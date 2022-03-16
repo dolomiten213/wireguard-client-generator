@@ -22,3 +22,7 @@ echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 
 systemctl enable wg-quick@wg0.service
 systemctl start wg-quick@wg0.service
+
+echo "1.1.1.1" >> server/dns.txt
+echo "1" >> server/last-used-ip.txt
+echo "194.87.238.84:51830" >> server/socket.txt
