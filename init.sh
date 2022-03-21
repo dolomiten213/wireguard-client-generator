@@ -3,7 +3,7 @@ cd /etc
 mkdir wireguard
 cd wireguard
 
-wget https://raw.githubusercontent.com/dolomiten213/wireguard-client-generator/main/wireguard-client-gen.sh
+wget https://raw.githubusercontent.com/dolomiten213/wireguard-client-generator/main/new-client.sh
 
 apt install -y wireguard
 mkdir server
