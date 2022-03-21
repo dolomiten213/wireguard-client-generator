@@ -6,6 +6,8 @@ cd wireguard
 wget https://raw.githubusercontent.com/dolomiten213/wireguard-client-generator/main/new-client.sh
 
 apt install -y wireguard
+apt install -y qrencode
+
 mkdir server
 wg genkey | tee server/private-key.txt | wg pubkey | tee server/public-key.txt
 
