@@ -1,3 +1,4 @@
+apt update && apt upgrade -y
 cd /etc
 mkdir wireguard
 cd wireguard
