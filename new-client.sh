@@ -3,15 +3,15 @@ fi
 read -p "Client name: " client
 read -p "Device name: " device
 
-if [ ! -d $client ]; then mkdir /etc/wireguard/$client
+if [ ! -d /etc/wireguard/clients/$client ]; then mkdir /etc/wireguard/clients/$client
 fi
 
-if [ ! -d $device ]; then mkdir /etc/wireguard/$client/$device
+if [ ! -d /etc/wireguard/clients/$client/$device ]; then mkdir /etc/wireguard/clients/$client/$device
         else
                 echo already have this client with this device
                 exit
 fi
-wg genkey | tee /etc/wireguard/$client/$device/private-key.txt | wg pubkey > /etc/wireguard/$client/$device/public-key.txt
+wg genkey | tee /etc/wireguard/clients/$client/$device/private-key.txt | wg pubkey > /etc/wireguard/clients/$client/$device/public-key.txt
 
 sprk=`cat /etc/wireguard/server/private-key.txt`
 spuk=`cat /etc/wireguard/server/public-key.txt`
